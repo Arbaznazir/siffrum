@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nb-yellow: #fde047;
+  --color-nb-pink: #f472b6;
+  --color-nb-blue: #60a5fa;
+  --color-nb-green: #4ade80;
+  --color-nb-bg: #f8fafc;
+  --color-nb-text: #0f172a;
+
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-nb-bg);
+  color: var(--color-nb-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(var(--color-nb-text) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background-color: var(--color-nb-yellow);
+  color: var(--color-nb-text);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-nb-bg);
+  border-left: 2px solid var(--color-nb-text);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-nb-pink);
+  border: 2px solid var(--color-nb-text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-nb-yellow);
+}
+
+@layer utilities {
+  .nb-border {
+    border: 3px solid var(--color-nb-text);
+  }
+
+  .nb-shadow {
+    box-shadow: 4px 4px 0px 0px var(--color-nb-text);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nb-shadow:hover {
+    box-shadow: 6px 6px 0px 0px var(--color-nb-text);
+    transform: translate(-2px, -2px);
+  }
+
+  .nb-shadow-lg {
+    box-shadow: 8px 8px 0px 0px var(--color-nb-text);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nb-shadow-lg:hover {
+    box-shadow: 12px 12px 0px 0px var(--color-nb-text);
+    transform: translate(-4px, -4px);
+  }
+
+  .nb-btn {
+    border: 3px solid var(--color-nb-text);
+    box-shadow: 4px 4px 0px 0px var(--color-nb-text);
+    background-color: var(--color-nb-yellow);
+    color: var(--color-nb-text);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nb-btn:hover {
+    background-color: var(--color-nb-pink);
+    box-shadow: 6px 6px 0px 0px var(--color-nb-text);
+    transform: translate(-2px, -2px);
+  }
+
+  .nb-btn:active {
+    box-shadow: 0px 0px 0px 0px var(--color-nb-text);
+    transform: translate(4px, 4px);
+  }
+
+  .nb-card {
+    background-color: white;
+    border: 3px solid var(--color-nb-text);
+    box-shadow: 8px 8px 0px 0px var(--color-nb-text);
+  }
+}

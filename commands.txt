@@ -1,0 +1,31 @@
+Frontend (/frontend)
+Development (Local):
+
+bash
+npm run dev
+(Starts the Vite development server with auto-reload)
+
+Production:
+
+bash
+# 1. First, build the static files
+npm run build
+# 2. Then, preview the production build locally 
+npm run preview
+
+--------
+
+Backend (/backend)
+Development (Local):
+
+bash
+npm run dev
+(Starts the server using tsx watch for auto-reloading when you save files)
+
+Production:
+
+bash
+# 1. First, compile TypeScript down to JavaScript
+npm run build
+# 2. Then, run the compiled code
+npm start
