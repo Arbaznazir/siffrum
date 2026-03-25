@@ -183,7 +183,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 {/* Email Block */}
-                <a href="mailto:hello@siffrum.com" className="group block relative">
+                <a href="mailto:contact@siffrum.com" className="group block relative">
                   <div className="absolute inset-0 bg-nb-text translate-x-3 translate-y-3"></div>
                   <div className="relative bg-white border-4 border-nb-text p-6 flex flex-col gap-4 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-200">
                     <div className="flex justify-between items-start">
@@ -194,13 +194,13 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-heading font-black text-gray-500 uppercase text-sm mb-1">DIRECT INBOX</p>
-                      <p className="font-heading font-black text-xl text-nb-text sm:text-2xl break-all">HELLO@SIFFRUM.COM</p>
+                      <p className="font-heading font-black text-xl text-nb-text sm:text-2xl break-all">CONTACT@SIFFRUM.COM</p>
                     </div>
                   </div>
                 </a>
 
                 {/* Phone Block */}
-                <a href="tel:+1234567890" className="group block relative">
+                <a href="tel:+919596760096" className="group block relative">
                   <div className="absolute inset-0 bg-nb-text translate-x-3 translate-y-3"></div>
                   <div className="relative bg-nb-pink border-4 border-nb-text p-6 flex flex-col gap-4 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-200">
                     <div className="flex justify-between items-start">
@@ -211,7 +211,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-heading font-black text-white/80 uppercase text-sm mb-1">VOICE PROTOCOL</p>
-                      <p className="font-heading font-black text-white text-3xl leading-none" style={{ WebkitTextStroke: '1px var(--color-nb-text)' }}>+1 (234) 567-890</p>
+                      <p className="font-heading font-black text-white text-3xl leading-none" style={{ WebkitTextStroke: '1px var(--color-nb-text)' }}>+91 9596760096</p>
                     </div>
                   </div>
                 </a>
@@ -228,7 +228,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-heading font-black text-gray-500 uppercase text-sm mb-1">PHYSICAL SERVER</p>
-                      <p className="font-heading font-black text-2xl text-nb-text">UNITED STATES</p>
+                      <p className="font-heading font-black text-2xl text-nb-text">VERACITY HOUSE, RAJBAGH SRINAGAR, J&K, INDIA</p>
                     </div>
                     {/* Faux map visual */}
                     <div className="w-full h-16 border-2 border-nb-text bg-[repeating-linear-gradient(45deg,var(--color-nb-text),var(--color-nb-text)_2px,transparent_2px,transparent_8px)] opacity-50 mt-2"></div>

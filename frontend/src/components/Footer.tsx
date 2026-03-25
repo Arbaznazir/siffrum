@@ -63,28 +63,28 @@ export default function Footer() {
 
             <div className="space-y-4 mb-12">
               <a
-                href="mailto:hello@siffrum.com"
+                href="mailto:contact@siffrum.com"
                 className="group flex items-center gap-4 text-white hover:text-nb-yellow transition-colors font-bold font-heading text-xl uppercase tracking-wider"
               >
                 <div className="w-12 h-12 bg-nb-blue border-4 border-white flex items-center justify-center shrink-0 -rotate-3 group-hover:rotate-0 transition-transform shadow-[4px_4px_0_0_rgba(255,255,255,1)]">
                   <Mail className="w-6 h-6 text-white" strokeWidth={3} />
                 </div>
-                hello@siffrum.com
+                contact@siffrum.com
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+919596760096"
                 className="group flex items-center gap-4 text-white hover:text-nb-yellow transition-colors font-bold font-heading text-xl uppercase tracking-wider"
               >
                 <div className="w-12 h-12 bg-nb-pink border-4 border-white flex items-center justify-center shrink-0 rotate-2 group-hover:rotate-0 transition-transform shadow-[4px_4px_0_0_rgba(255,255,255,1)]">
                   <Phone className="w-6 h-6 text-white" strokeWidth={3} />
                 </div>
-                +1 (234) 567-890
+                +91 9596760096
               </a>
               <div className="flex items-center gap-4 text-white font-bold font-heading text-xl uppercase tracking-wider">
                 <div className="w-12 h-12 bg-nb-green border-4 border-white flex items-center justify-center shrink-0 -rotate-1 shadow-[4px_4px_0_0_rgba(255,255,255,1)]">
                   <MapPin className="w-6 h-6 text-white" strokeWidth={3} />
                 </div>
-                SF, CA · WORLDWIDE
+                Veracity House, Rajbagh Srinagar, J&K, India
               </div>
             </div>
 
