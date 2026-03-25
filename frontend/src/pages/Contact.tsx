@@ -63,10 +63,13 @@ ${formData.message}
 Submitted via Siffrum Contact Form
     `.trim();
 
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=contact@siffrum.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Use mailto: link which works on both desktop and mobile
+    // On mobile, it will open the default mail app (Gmail app if set as default)
+    // On desktop, it will open the default mail client or Gmail web
+    const mailtoUrl = `mailto:contact@siffrum.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Open Gmail in new tab
-    window.open(gmailUrl, '_blank');
+    // Open mail client
+    window.location.href = mailtoUrl;
     
     // Show success message after brief delay
     setTimeout(() => {
