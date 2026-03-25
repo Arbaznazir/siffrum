@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin, AlertTriangle, Terminal } from 'lucide-react';
-import { submitContact } from '../lib/api';
 
 const services = [
   'WEAPONIZED WEB PROD',
@@ -36,16 +35,44 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    try {
-      await submitContact(formData);
-      // Artificial delay for brutalist dramatic effect
-      setTimeout(() => {
-        setStatus('sent');
-        setFormData({ name: '', email: '', company: '', phone: '', service: '', budget: '', message: '' });
-      }, 800);
-    } catch {
-      setStatus('error');
-    }
+    
+    // Compose Gmail URL with pre-filled data
+    const subject = `🚀 NEW CONTACT REQUEST from ${formData.name}${formData.company ? ` - ${formData.company}` : ''}`;
+    const body = `
+═══════════════════════════════════════════════════
+    SIFFRUM CONTACT FORM SUBMISSION
+═══════════════════════════════════════════════════
+
+📋 CONTACT DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  👤 Agent Name:    ${formData.name}
+  📧 Email:         ${formData.email}
+  🏢 Company:       ${formData.company || 'N/A'}
+  📞 Phone:         ${formData.phone || 'N/A'}
+
+💼 PROJECT DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎯 Service:       ${formData.service}
+  💰 Budget:        ${formData.budget || 'Not specified'}
+
+📝 MESSAGE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${formData.message}
+
+═══════════════════════════════════════════════════
+Submitted via Siffrum Contact Form
+    `.trim();
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=contact@siffrum.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open Gmail in new tab
+    window.open(gmailUrl, '_blank');
+    
+    // Show success message after brief delay
+    setTimeout(() => {
+      setStatus('sent');
+      setFormData({ name: '', email: '', company: '', phone: '', service: '', budget: '', message: '' });
+    }, 800);
   };
 
   const handleChange = (
